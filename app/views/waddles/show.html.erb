@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @waddle.name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @waddle.birthday %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @waddle.height %>
+</p>
+
+<p>
+  <strong>Dance type:</strong>
+  <%= @waddle.dance_type %>
+</p>
+
+<%= link_to 'Edit', edit_waddle_path(@waddle) %> |
+<%= link_to 'Back', waddles_path %>

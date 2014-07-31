@@ -1,0 +1,31 @@
+<h1>Listing waddles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Height</th>
+      <th>Dance type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @waddles.each do |waddle| %>
+      <tr>
+        <td><%= waddle.name %></td>
+        <td><%= waddle.birthday %></td>
+        <td><%= waddle.height %></td>
+        <td><%= waddle.dance_type %></td>
+        <td><%= link_to 'Show', waddle %></td>
+        <td><%= link_to 'Edit', edit_waddle_path(waddle) %></td>
+        <td><%= link_to 'Destroy', waddle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Waddle', new_waddle_path %>
